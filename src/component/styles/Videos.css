@@ -1,11 +1,9 @@
 .main{
     align-items: center;
     width: 100%;
-    height: auto;
+    margin: 30px;
 }
-.sub svg{
-    display: block;
-}
+
 
 .sub{
     width:100%;
@@ -14,15 +12,29 @@
 }
 .video-content{
     max-width: 40%;
-    height: auto;
-    margin: 2% 20px;
+    margin: auto;
+    height: 400px;
 }
-
+h1{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: white;
+}
+p{
+    font-size: 25px;
+    text-align: justify;
+    color: white;
+}
+span{
+    font-size: 20px;
+    text-align:justify;
+    color: white;
+}
 .video-main{
     max-width: 60%;
     width:auto;
     height:400px;
-    margin: 20px 10px;
+    margin: 10% 10px;
     position: relative;
 }
 .play-button{

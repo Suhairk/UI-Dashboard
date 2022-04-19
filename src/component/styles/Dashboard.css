@@ -1,8 +1,7 @@
 .dash-board-main{
     align-items: center;
     width: 100%;
-    height: 700px;
-    margin: 0 5px;
+    background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
 }
 .dash-board-sub svg{
     display: block;
@@ -14,6 +13,7 @@
 .dash-board-title h1{
     text-align: center;
 }
+
 .eWjCzc,.hJJzxj{
     color: black !important;
     background-color: white!important;
@@ -22,7 +22,9 @@
     min-width: 40px  !important;
     line-height: 40px  !important;
     border-radius: unset !important;
+    transition: 2s ease-in !important;
 }
+
 .eAyARa,.hJKYRZ{
     color: rgb(173, 172, 172) !important;
     background-color: white!important;

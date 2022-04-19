@@ -24,7 +24,7 @@ function Videos({title, airDate,description}) {
   }
   return (
     <div className='main'>
-        <div className='sub'>
+        <div className='sub'> 
             <div className='video-main'>
             <video className='video-assets' id= 'video-full' >
                 <source src={FILES.PLACEHOLDER_VIDEO} type="video/mp4"/>
