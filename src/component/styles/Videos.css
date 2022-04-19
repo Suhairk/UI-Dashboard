@@ -15,16 +15,21 @@
 .video-content{
     max-width: 40%;
     height: auto;
-    margin: 5% 20px;
-    
+    margin: 2% 20px;
 }
-p{
-}
+
 .video-main{
     max-width: 60%;
     width:auto;
     height:400px;
     margin: 20px 10px;
+    position: relative;
+}
+.play-button{
+    position: absolute;
+    top: 180px;
+    left: 300px;
+    cursor: pointer;
 }
 .video-assets{
     width:auto;

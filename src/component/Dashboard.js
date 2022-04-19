@@ -29,22 +29,14 @@ const body = [
 ]
 
 function Dashboard() {
-    let array = []
     const [epi, setEpi] = useState('')
         getEpisodesAPI().then((res)=>{
             //console.log(res.data)
-           //array.push(res.data)
            setEpi(res.data)
         })
-
-
-    //console.log("epi is", epi)
-    //console.log(epi?.number)
-    // for (let i in epi){
-    //     console.log(epi[i].desc)
-    // }
-   
-        console.log(epi.title)
+   const body1 = epi;
+        console.log(body1)
+       
     //console.log("epi title is", epi.title)
     
   return (
@@ -54,9 +46,8 @@ function Dashboard() {
         </div>
         <Carousel  breakPoints = {breakPoints}>
         {body.map((itr, id)=>{
-               return <Videos title = {itr?.title} airDate = {itr?.originalAirDate} description = {itr?.desc}/>
+               return <Videos key={id} title = {itr?.title} airDate = {itr?.originalAirDate} description = {itr?.desc}/>
            })}
-            {/* <Videos title = {epi?.title} airDate = {itr?.originalAirDate} description = {itr?.desc}/> */}
             
         </Carousel>        
     </div>
