@@ -1,4 +1,4 @@
-import React, {} from 'react'
+import React, { useState } from 'react'
 import './styles/Dashboard.css'
 
 import Videos from './Videos'
@@ -8,31 +8,57 @@ const breakPoints =[
     {width: 1, itemsToShow: 1},
     { width: 550, itemsToShow: 2, itemsToScroll: 1, pagination: true },
     { width: 850, itemsToShow: 3 },
-    { width: 1150, itemsToShow: 4, itemsToScroll: 1 , pagination:true},
+    { width: 1150, itemsToShow: 1, itemsToScroll: 1 , pagination:true},
     { width: 1450, itemsToShow: 5 },
     { width: 1750, itemsToShow: 6 },
 ]
 
+const body = [
+    {title:"title",originalAirDate:"airDate", desc:"A pizza delivery boy named Philip J. Fry accidentally stumbles into a cryogenic tube on Dеcember 31, 1999 and awakens on New Year's Eve in the year 2999, where he meets a mutant career counselor named Leela, an alcoholic robot named Bender, and his distant nephew Professor Farnsworth."},
+    {title:"aaa",originalAirDate:"aaa", desc:"A pizza delivery boy named Philip J. Fry accidentally stumbles into a cryogenic tube on Dеcember 31, 1999 and awakens on New Year's Eve in the year 2999, where he meets a mutant career counselor named Leela, an alcoholic robot named Bender, and his distant nephew Professor Farnsworth."},
+    {title:"aaa",originalAirDate:"aaa", desc:"aaa"},
+    {title:"aaa",originalAirDate:"aaa", desc:"aaa"},
+    {title:"aaa",originalAirDate:"aaa", desc:"aaa"},
+    {title:"aaa",originalAirDate:"aaa", desc:"aaa"},
+    {title:"aaa",originalAirDate:"aaa", desc:"aaa"},
+    {title:"aaa",originalAirDate:"aaa", desc:"aaa"},
+    {title:"aaa",originalAirDate:"aaa", desc:"aaa"},
+    {title:"aaa",originalAirDate:"aaa", desc:"aaa"},
+    {title:"aaa",originalAirDate:"aaa", desc:"aaa"},
+    {title:"aaa",originalAirDate:"aaa", desc:"aaa"},
+]
+
 function Dashboard() {
     let array = []
+    const [epi, setEpi] = useState('')
         getEpisodesAPI().then((res)=>{
             //console.log(res.data)
-           array.push(res.data)
+           //array.push(res.data)
+           setEpi(res.data)
         })
-    console.log("array is", array)
+
+
+    //console.log("epi is", epi)
+    //console.log(epi?.number)
+    // for (let i in epi){
+    //     console.log(epi[i].desc)
+    // }
+   
+        console.log(epi.title)
+    //console.log("epi title is", epi.title)
     
   return (
     <div className='dash-board-main'>
         <div className='dash-board-title'>
             <h1>DASHBOARD</h1>
         </div>
-        <Carousel  breakPoints = {breakPoints} >
-            {array.map((itr,id)=>{
-            <Videos key={id} title = {itr?.title} airDate = {itr?.originalAirDate} description = {itr?.desc}/>
-                })}
-        </Carousel>
-        <Videos/>
-        
+        <Carousel  breakPoints = {breakPoints}>
+        {body.map((itr, id)=>{
+               return <Videos title = {itr?.title} airDate = {itr?.originalAirDate} description = {itr?.desc}/>
+           })}
+            {/* <Videos title = {epi?.title} airDate = {itr?.originalAirDate} description = {itr?.desc}/> */}
+            
+        </Carousel>        
     </div>
   )
 }

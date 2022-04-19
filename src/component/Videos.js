@@ -13,7 +13,7 @@ function Videos({title, airDate,description}) {
             <div className='video-content'>
                 <h1>{title}</h1>
                 <p>{airDate}</p>
-                <p>{description}</p>
+                <span>{description}</span>
             </div>
         </div>
     </div>

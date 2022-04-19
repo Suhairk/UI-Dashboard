@@ -1,8 +1,7 @@
 .main{
     align-items: center;
     width: 100%;
-    height: 700px;
-    margin: 0 5px;
+    height: auto;
 }
 .sub svg{
     display: block;
@@ -11,23 +10,24 @@
 .sub{
     width:100%;
     display: flex;
-    flex-wrap: wrap;
     justify-content:center;
-    padding: 10px 20px;
 }
 .video-content{
     max-width: 40%;
     height: auto;
-    margin: 20px 10px;
+    margin: 5% 20px;
+    
+}
+p{
 }
 .video-main{
     max-width: 60%;
     width:auto;
-    height:200px;
+    height:400px;
     margin: 20px 10px;
 }
 .video-assets{
     width:auto;
-    height:200px;
+    height:100%;
     justify-content: center;
 }

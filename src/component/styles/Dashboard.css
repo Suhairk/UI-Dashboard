@@ -8,9 +8,36 @@
     display: block;
 }
 .dash-board-title{
-  
     justify-content: center;
+    margin: 10px 0 ;
 }
 .dash-board-title h1{
     text-align: center;
+}
+.eWjCzc,.hJJzxj{
+    color: black !important;
+    background-color: white!important;
+    width: 40px  !important;
+    height: 200px  !important;
+    min-width: 40px  !important;
+    line-height: 40px  !important;
+    border-radius: unset !important;
+}
+.eAyARa,.hJKYRZ{
+    color: rgb(173, 172, 172) !important;
+    background-color: white!important;
+    width: 40px  !important;
+    height: 200px  !important;
+    min-width: 40px  !important;
+    line-height: 40px  !important;
+    border-radius: unset !important;
+}
+.krmNah,.jhmYzC{
+    display: none !important;
+}
+.krmNah{
+    display: none !important;
+}
+.hHSNMm{
+    display: none !important;
 }
